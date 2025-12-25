@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 namespace EmployeeManagementApi.DTOs
 {
-    class UpdateEmployeeDto
+    public class UpdateEmployeeDto
     {
         [Required]
         public string? Name { get; set; }
