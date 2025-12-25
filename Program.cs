@@ -1,3 +1,5 @@
+using EmployeeManagementApi.Services;
+
 namespace EmployeeManagementApi
 {
     class Program
@@ -6,7 +8,7 @@ namespace EmployeeManagementApi
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllers();
-          
+            builder.Services.AddScoped<IEmployeeService,EmployeeService>();
             var app = builder.Build();
 
             app.UseHttpsRedirection();
